@@ -146,21 +146,12 @@ public class ResourceCentreTest {
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		ResourceCentre.viewAllCamcorder(camcorderList);
-		String assetTag = Helper.readString("Enter asset tag: ");
-		boolean isLoaned = false;
 		for (int i = 0; i < camcorderList.size(); i++) {
-			if (assetTag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())) {
-				if (camcorderList.get(i).getIsAvailable() == false) {
-					String dueDate = Helper.readString("Enter due date: ");
-					camcorderList.get(i).setDueDate(dueDate);
-					camcorderList.get(i).setIsAvailable(true);
-					isLoaned = true;
-					System.out.println("Camcorder " + assetTag + " returned");
-				}
-				if (isLoaned == true) {
-					System.out.println("Invalid asset tag");
-				}
+			if (camcorderList.get(i).getIsAvailable() == true) {
+				assertTrue("Return success", true);
+			}
+			else {
+				assertTrue("Return failed", false);
 			}
 		}
 	}
@@ -169,21 +160,12 @@ public class ResourceCentreTest {
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		ResourceCentre.viewAllChromebook(chromebookList);
-		String assetTag = Helper.readString("Enter asset tag: ");
-		boolean isLoaned = false;
 		for (int i = 0; i < chromebookList.size(); i++) {
-			if (assetTag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())) {
-				if (chromebookList.get(i).getIsAvailable() == false) {
-					String dueDate = Helper.readString("Enter due date: ");
-					chromebookList.get(i).setDueDate(dueDate);
-					chromebookList.get(i).setIsAvailable(true);
-					isLoaned = true;
-					System.out.println("Chromebook " + assetTag + " returned");
-				}
-				if (isLoaned == true) {
-					System.out.println("Invalid asset tag");
-				}
+			if (chromebookList.get(i).getIsAvailable() == true) {
+				assertTrue("Return success", true);
+			}
+			else {
+				assertTrue("Return failed", false);
 			}
 		}
 	}
