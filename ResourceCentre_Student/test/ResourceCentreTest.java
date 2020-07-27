@@ -133,8 +133,13 @@ public class ResourceCentreTest {
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		boolean isloaned = false;
-		assertTrue("loaned fail", isloaned);
+		for(int i = 0; i < chromebookList.size(); i++) {
+			if(chromebookList.get(i).getIsAvailable() == true) {
+				assertTrue("Loan success", true);
+			}else {
+				assertTrue("loan fail",false);
+			}
+		}
 	}
 	
 	@Test
