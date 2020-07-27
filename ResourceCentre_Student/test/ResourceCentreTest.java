@@ -134,7 +134,7 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		boolean isloaned = false;
-		assertTrue(isloaned);
+		assertTrue("loaned fail", isloaned);
 	}
 	
 	@Test
