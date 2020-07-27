@@ -160,7 +160,7 @@ public class ResourceCentre {
 	}
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
 		
-		ResourceCentre.setHeader("CAMCORDER LIST");
+		ResourceCentre.setHeader("CHROMEBOOK LIST");
 		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
 				"AVAILABLE", "DUE DATE","OS");
 		output += retrieveAllChromebook(chromebookList);
